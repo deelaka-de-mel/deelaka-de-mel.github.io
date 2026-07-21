@@ -3,49 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name — Portfolio</title>
+  <title>Deelaka Jerome de Mel — Portfolio</title>
+
+  <meta name="description" content="Portfolio of Deelaka Jerome de Mel, Electronic & Telecommunication Engineering undergraduate at University of Moratuwa.">
+  <meta property="og:title" content="Deelaka Jerome de Mel — Portfolio">
+  <meta property="og:description" content="Electronic & Telecommunication Engineering undergraduate — hardware, software, and embedded systems projects.">
+  <meta property="og:image" content="https://deelaka-de-mel.github.io/assets/images/headshot.png">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <nav>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      <button id="theme-toggle">🌙</button>
     </nav>
   </header>
 
-  <section id="about">
+  <section id="about" class="fade-in">
+    <img src="assets/images/headshot.png" alt="Deelaka Jerome de Mel" class="profile-photo">
     <h1>Deelaka Jerome de Mel</h1>
     <p>Electronic & Telecommunication Engineering Undergraduate, University of Moratuwa</p>
   </section>
 
-  <section id="projects">
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-badge">Altium Designer</span>
+      <span class="skill-badge">LTspice</span>
+      <span class="skill-badge">PCB Design</span>
+      <span class="skill-badge">Verilog / SystemVerilog</span>
+      <span class="skill-badge">Spring Boot</span>
+      <span class="skill-badge">React / TypeScript</span>
+      <span class="skill-badge">Java</span>
+      <span class="skill-badge">Python</span>
+    </div>
+  </section>
+
+  <section id="projects" class="fade-in">
     <h2>Projects</h2>
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="hardware">Hardware</button>
+      <button class="filter-btn" data-filter="software">Software</button>
+    </div>
+
     <div class="project-grid">
-      <div class="project-card">
+      <div class="project-card" data-category="hardware">
         <h3>Class D Amplifier</h3>
         <p>A 300kHz Class D amplifier with a custom gate driver subsystem — covered switch-node ringing diagnostics, RC snubber design, and bootstrap gate driver circuitry.</p>
-        <a href="https://github.com/deelaka-de-mel/class-d-audio-amplifier" target="_blank">View on GitHub</a>
+        <a href="projects/class-d-amplifier.html">View Details →</a>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-category="hardware">
         <h3>Pure Sine Wave Inverter</h3>
-        <p>A 300W pure sine wave inverter operating at 12V</p>
-        <a href="https://github.com/deelaka-de-mel/class-d-audio-amplifier" target="_blank">View on GitHub</a>
+        <p>A 300W pure sine wave inverter operating at 12V.</p>
+        <a href="projects/pure-sine-wave-inverter.html">View Details →</a>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-category="hardware">
         <h3>Analog Solar Tracker</h3>
-        <p>A discrete implementation of a Solar tracker.</p>
-        <a href="https://github.com/deelaka-de-mel/class-d-audio-amplifier" target="_blank">View on GitHub</a>
+        <p>A discrete implementation of a solar tracker.</p>
+        <a href="projects/analog-solar-tracker.html">View Details →</a>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="fade-in">
     <h2>Contact</h2>
-    <a href="mailto:deelakademel23@gmail.com">deelakademel23@gmail.com</a>
+    <form action="https://formspree.io/f/xkodzzkv" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p style="margin-top: 1rem;">
+      <a href="mailto:deelakademel23@gmail.com">deelakademel23@gmail.com</a>
+    </p>
   </section>
 
   <script src="js/script.js"></script>
