@@ -278,3 +278,35 @@ h2 {
 .grades-table tr:last-child td {
   border-bottom: none;
 }
+
+.tagline {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.bio {
+  max-width: 650px;
+  margin-bottom: 1.5rem;
+}
+
+.interests h3 {
+  font-size: 1.1rem;
+  color: var(--color-heading);
+  margin-bottom: 0.5rem;
+}
+
+.interests-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.interests-list li {
+  background-color: var(--color-card-bg);
+  color: var(--color-text);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
