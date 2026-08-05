@@ -23,6 +23,7 @@
   <header>
     <nav>
       <a href="#about">About</a>
+      <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="academics.html">Academics</a>
@@ -50,6 +51,27 @@
   </div>
 </section>
 
+  <section id="education" class="fade-in">
+    <h2>Education</h2>
+    <div class="education-timeline">
+      <article class="education-card">
+        <p class="education-meta">2019 — Present</p>
+        <h3>B.Sc. Engineering (Hons)</h3>
+        <p class="education-school">University of Moratuwa</p>
+        <p class="education-detail">Electronic & Telecommunication Engineering</p>
+        <span class="education-status">Current Status: Undergraduate</span>
+      </article>
+
+      <article class="education-card">
+        <p class="education-meta">2016 — 2018</p>
+        <h3>Advanced Level</h3>
+        <p class="education-school">School: Placeholder</p>
+        <p class="education-detail">Stream / specialization: Placeholder</p>
+        <span class="education-status">Current Status: Completed</span>
+      </article>
+    </div>
+  </section>
+
   <section id="skills" class="fade-in">
     <h2>Skills</h2>
     <div class="skills-grid">
@@ -65,30 +87,138 @@
   <section id="projects" class="fade-in">
     <h2>Projects</h2>
 
-    <div class="filter-buttons">
+    <div class="filter-buttons" aria-label="Project category filters">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="hardware">Hardware</button>
       <button class="filter-btn" data-filter="software">Software</button>
     </div>
 
-    <div class="project-grid">
-      <div class="project-card" data-category="hardware">
-        <h3>Class D Amplifier</h3>
-        <p>A 300kHz Class D amplifier with a custom gate driver subsystem — covered switch-node ringing diagnostics, RC snubber design, and bootstrap gate driver circuitry.</p>
-        <a href="projects/class-d-amplifier.html">View Details →</a>
-      </div>
+    <div class="project-showcase-list">
+      <article class="project-showcase" data-category="hardware">
+        <div class="project-media">
+          <button class="project-hero" type="button" data-lightbox-image="assets/images/class  D amp/amplifier.png" data-lightbox-caption="Class D Amplifier — power stage and gate driver architecture">
+            <img src="assets/images/class  D amp/amplifier.png" alt="Class D amplifier hardware hero image" loading="lazy" decoding="async">
+          </button>
 
-      <div class="project-card" data-category="hardware">
-        <h3>Pure Sine Wave Inverter</h3>
-        <p>A 300W pure sine wave inverter operating at 12V.</p>
-        <a href="projects/pure-sine-wave-inverter.html">View Details →</a>
-      </div>
+          <div class="project-gallery" aria-label="Class D Amplifier screenshots">
+            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/class  D amp/filter.png" data-lightbox-caption="LC filter and output shaping stage">
+              <img src="assets/images/class  D amp/filter.png" alt="Class D amplifier filter screenshot" loading="lazy" decoding="async">
+            </button>
+            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/class  D amp/pre amp.png" data-lightbox-caption="Pre-amplifier and modulation input section">
+              <img src="assets/images/class  D amp/pre amp.png" alt="Class D amplifier input stage screenshot" loading="lazy" decoding="async">
+            </button>
+            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/class  D amp/simulation.png" data-lightbox-caption="Simulation and signal analysis for the switch mode design">
+              <img src="assets/images/class  D amp/simulation.png" alt="Class D amplifier simulation screenshot" loading="lazy" decoding="async">
+            </button>
+            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/class  D amp/triangle wave gen.png" data-lightbox-caption="Triangle wave generation subsystem">
+              <img src="assets/images/class  D amp/triangle wave gen.png" alt="Class D amplifier triangle wave generator screenshot" loading="lazy" decoding="async">
+            </button>
+          </div>
+        </div>
 
-      <div class="project-card" data-category="hardware">
-        <h3>Analog Solar Tracker</h3>
-        <p>A discrete implementation of a solar tracker.</p>
-        <a href="projects/analog-solar-tracker.html">View Details →</a>
-      </div>
+        <div class="project-content">
+          <p class="project-overline">Hardware · Power Electronics</p>
+          <h3>Class D Amplifier</h3>
+          <p>A 300 kHz Class D amplifier with a custom gate driver subsystem, switch-node diagnostics, RC snubber tuning, and bootstrap gate driver coverage.</p>
+
+          <div class="project-tech-list" aria-label="Technologies used">
+            <span class="tech-badge">LTspice</span>
+            <span class="tech-badge">PCB Design</span>
+            <span class="tech-badge">Gate Driver</span>
+            <span class="tech-badge">Power Stage</span>
+          </div>
+
+          <div class="project-status-row">
+            <span class="project-status">Status: Completed</span>
+          </div>
+
+          <div class="project-actions">
+            <a class="project-link project-link-primary" href="https://github.com/deelaka-de-mel/class-d-audio-amplifier" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="project-link" href="projects/class-d-amplifier.html">More Details</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-showcase reverse" data-category="hardware">
+        <div class="project-media">
+          <button class="project-hero" type="button" data-lightbox-image="assets/images/sine wave inverter/output stage.png" data-lightbox-caption="Pure Sine Wave Inverter — high-voltage output stage and transformer interface">
+            <img src="assets/images/sine wave inverter/output stage.png" alt="Pure sine wave inverter hero image" loading="lazy" decoding="async">
+          </button>
+
+          <div class="project-gallery" aria-label="Pure Sine Wave Inverter screenshots">
+            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/sine wave inverter/pcb.png" data-lightbox-caption="PCB layout and power routing for the inverter module">
+              <img src="assets/images/sine wave inverter/pcb.png" alt="Inverter PCB screenshot" loading="lazy" decoding="async">
+            </button>
+            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/sine wave inverter/pwm generation .png" data-lightbox-caption="PWM generation and control timing waveform">
+              <img src="assets/images/sine wave inverter/pwm generation .png" alt="Inverter PWM generation screenshot" loading="lazy" decoding="async">
+            </button>
+            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/sine wave inverter/routing.png" data-lightbox-caption="Signal and power routing review for the converter stage">
+              <img src="assets/images/sine wave inverter/routing.png" alt="Inverter routing screenshot" loading="lazy" decoding="async">
+            </button>
+            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/sine wave inverter/transformer switching.png" data-lightbox-caption="Transformer switching and driver synchronization details">
+              <img src="assets/images/sine wave inverter/transformer switching.png" alt="Transformer switching screenshot" loading="lazy" decoding="async">
+            </button>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <p class="project-overline">Hardware · Embedded Systems</p>
+          <h3>Pure Sine Wave Inverter</h3>
+          <p>A 300 W pure sine wave inverter operating at 12 V, designed around a push-pull converter and a transformer stage that steps voltage to a high-voltage AC bus.</p>
+
+          <div class="project-tech-list" aria-label="Technologies used">
+            <span class="tech-badge">Transformer Design</span>
+            <span class="tech-badge">Power Electronics</span>
+            <span class="tech-badge">Simulation</span>
+            <span class="tech-badge">PCB Layout</span>
+          </div>
+
+          <div class="project-status-row">
+            <span class="project-status">Status: Completed</span>
+          </div>
+
+          <div class="project-actions">
+            <a class="project-link project-link-primary" href="https://github.com/deelaka-de-mel" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="project-link" href="projects/pure-sine-wave-inverter.html">More Details</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-showcase" data-category="hardware">
+        <div class="project-media">
+          <button class="project-hero" type="button" data-lightbox-image="assets/images/analog solar tracker/routing.png" data-lightbox-caption="Analog Solar Tracker — PCB routing and control-signal layout">
+            <img src="assets/images/analog solar tracker/routing.png" alt="Analog solar tracker hero image" loading="lazy" decoding="async">
+          </button>
+
+          <div class="project-gallery" aria-label="Analog Solar Tracker screenshots">
+            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/analog solar tracker/solar tracker pcb.png" data-lightbox-caption="Analog solar tracker PCB implementation">
+              <img src="assets/images/analog solar tracker/solar tracker pcb.png" alt="Solar tracker circuit board screenshot" loading="lazy" decoding="async">
+            </button>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <p class="project-overline">Hardware · Mechatronics</p>
+          <h3>Analog Solar Tracker</h3>
+          <p>A discrete implementation of a solar tracker that emphasizes analog control behavior, stable actuator response, and a clean physical hardware layout.</p>
+
+          <div class="project-tech-list" aria-label="Technologies used">
+            <span class="tech-badge">Analog Design</span>
+            <span class="tech-badge">Control Systems</span>
+            <span class="tech-badge">PCB</span>
+            <span class="tech-badge">Sensors</span>
+          </div>
+
+          <div class="project-status-row">
+            <span class="project-status">Status: Completed</span>
+          </div>
+
+          <div class="project-actions">
+            <a class="project-link project-link-primary" href="https://github.com/deelaka-de-mel" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="project-link" href="projects/analog-solar-tracker.html">More Details</a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 

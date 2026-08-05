@@ -14,17 +14,71 @@
     </nav>
   </header>
 
-  <section class="fade-in">
+  <section class="fade-in project-detail-page">
     <h1>Class D Amplifier</h1>
-    <p>A 300kHz Class D amplifier with a custom gate driver subsystem, and bootstrap gate driver circuitry.</p>
+    <p class="project-detail-lead">A 300 kHz Class D amplifier with a custom gate driver subsystem, switch-node diagnostics, RC snubber tuning, and bootstrap gate driver coverage.</p>
 
-    <h2>Schematics</h2>
-    <img src="../assets/images/class_D_schematic.png" alt="Class D amplifier schematic" class="detail-image">
+    <div class="project-detail-grid">
+      <div>
+        <h2>Hero Image</h2>
+        <img src="../assets/images/class  D amp/amplifier.png" alt="Class D amplifier hero image" class="detail-image">
+      </div>
+      <div>
+        <h2>Gallery</h2>
+        <div class="project-gallery project-detail-gallery">
+          <img src="../assets/images/class  D amp/filter.png" alt="Filter stage" class="detail-image">
+          <img src="../assets/images/class  D amp/pre amp.png" alt="Pre-amplifier stage" class="detail-image">
+          <img src="../assets/images/class  D amp/simulation.png" alt="Simulation result" class="detail-image">
+        </div>
+      </div>
+    </div>
 
-    <h2>Details</h2>
-    <p>I was in charge of the gate driver stage and half bridge stage.</p>
+    <h2>Overview</h2>
+    <p>This project centers on a switch-mode audio amplifier design focused on high-frequency efficiency, careful gate drive behavior, and practical hardware validation.</p>
 
-    <a href="https://github.com/deelaka-de-mel/class-d-audio-amplifier" target="_blank">View full code on GitHub</a>
+    <h2>Motivation</h2>
+    <p>The goal was to understand the real constraints of power electronics design, especially switching transitions, driver timing, and layout-sensitive behavior.</p>
+
+    <h2>Problem Statement</h2>
+    <p>The amplifier needed to address switch-node ringing, reliable gate drive operation, and signal integrity during high-frequency switching.</p>
+
+    <h2>Features</h2>
+    <ul>
+      <li>Custom gate driver subsystem</li>
+      <li>Bootstrap driver arrangement</li>
+      <li>RC snubber and ringing analysis</li>
+      <li>Simulation-driven validation workflow</li>
+    </ul>
+
+    <h2>Hardware Used</h2>
+    <ul>
+      <li>Half-bridge power stage</li>
+      <li>Gate driver circuitry</li>
+      <li>LC filter network</li>
+      <li>Class D switching hardware</li>
+    </ul>
+
+    <h2>Software Used</h2>
+    <ul>
+      <li>LTspice</li>
+      <li>PCB design tools</li>
+      <li>Simulation and waveform analysis</li>
+    </ul>
+
+    <h2>Challenges Faced</h2>
+    <p>Switch-node oscillations, driver timing stability, and balancing practical implementation with thorough bench-level validation.</p>
+
+    <h2>Future Improvements</h2>
+    <p>Refining thermal and layout performance for higher power density and stronger manufacturability.</p>
+
+    <h2>GitHub Repository</h2>
+    <p><a href="https://github.com/deelaka-de-mel/class-d-audio-amplifier" target="_blank" rel="noopener noreferrer">Class D Audio Amplifier Repository</a></p>
+
+    <h2>Downloads</h2>
+    <p>Placeholder section for PDFs, board files, or design archives.</p>
+
+    <h2>Experience & What I Learned</h2>
+    <p>This area is intentionally left for your personal write-up and reflection later.</p>
   </section>
 
   <script src="../js/script.js"></script>
