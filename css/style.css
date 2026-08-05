@@ -191,32 +191,43 @@ h2 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Contact form */
-.contact-form {
+/* Contact buttons */
+.contact-links {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
-  max-width: 500px;
+  margin-top: 0.5rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: inherit;
-  background-color: var(--color-card-bg);
-  color: var(--color-text);
-}
-
-.contact-form button {
-  background-color: var(--color-accent);
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
   color: #fff;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  opacity: 0.95;
+}
+
+.contact-button.email {
+  background: linear-gradient(135deg, #ff7a59, #ff4d6d);
+}
+
+.contact-button.github {
+  background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+.contact-button.linkedin {
+  background: linear-gradient(135deg, #0077b5, #005582);
 }
 
 @media (max-width: 600px) {
