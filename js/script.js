@@ -48,14 +48,21 @@ filterBtns.forEach(btn => {
     const filter = btn.dataset.filter;
 
     projectShowcases.forEach(card => {
-      if (filter === 'all' || card.dataset.category === filter) {
-        card.style.display = 'grid';
-      } else {
-        card.style.display = 'none';
-      }
+      const matches = card.dataset.category === filter;
+      card.style.display = matches ? 'grid' : 'none';
     });
   });
 });
+
+if (filterBtns.length > 0) {
+  const defaultFilter = document.querySelector('.filter-btn.active');
+  if (defaultFilter) {
+    const initialFilter = defaultFilter.dataset.filter;
+    projectShowcases.forEach(card => {
+      card.style.display = card.dataset.category === initialFilter ? 'grid' : 'none';
+    });
+  }
+}
 
 // Lightbox
 const lightbox = document.createElement('div');
