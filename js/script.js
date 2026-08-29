@@ -1,114 +1,74 @@
-// Dark/light mode toggle
-const toggleBtn = document.getElementById('theme-toggle');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (toggleBtn) {
-  const currentTheme = localStorage.getItem('theme');
-
-  if (currentTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    toggleBtn.textContent = '☀️';
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    if (isDark) {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'light');
-      toggleBtn.textContent = '🌙';
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-      toggleBtn.textContent = '☀️';
-    }
-  });
+const faders = document.querySelectorAll('.fade-in');
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  faders.forEach((element) => element.classList.add('visible'));
+} else {
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  faders.forEach((element) => appearOnScroll.observe(element));
 }
 
-// Fade-in on scroll
-const faders = document.querySelectorAll('.fade-in');
-
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  });
-}, { threshold: 0.2 });
-
-faders.forEach(fader => appearOnScroll.observe(fader));
-
-// Project filter
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectShowcases = document.querySelectorAll('.project-showcase');
-
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    const filter = btn.dataset.filter;
-
-    projectShowcases.forEach(card => {
-      const matches = card.dataset.category === filter;
-      card.style.display = matches ? 'grid' : 'none';
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-showcase');
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    filterButtons.forEach((item) => {
+      const active = item === button;
+      item.classList.toggle('active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    projectCards.forEach((card) => {
+      card.hidden = filter !== 'all' && card.dataset.category !== filter;
     });
   });
 });
 
-if (filterBtns.length > 0) {
-  const defaultFilter = document.querySelector('.filter-btn.active');
-  if (defaultFilter) {
-    const initialFilter = defaultFilter.dataset.filter;
-    projectShowcases.forEach(card => {
-      card.style.display = card.dataset.category === initialFilter ? 'grid' : 'none';
-    });
-  }
-}
-
-// Lightbox
 const lightbox = document.createElement('div');
 lightbox.className = 'lightbox';
+lightbox.setAttribute('role', 'dialog');
+lightbox.setAttribute('aria-modal', 'true');
+lightbox.setAttribute('aria-label', 'Image preview');
 lightbox.innerHTML = `
-  <button class="lightbox-close" type="button" aria-label="Close image preview">×</button>
-  <div class="lightbox-panel">
-    <img alt="Expanded project image preview">
-    <div class="lightbox-caption"></div>
-  </div>
-`;
+  <button class="lightbox-close" type="button" aria-label="Close image preview">&times;</button>
+  <div class="lightbox-panel"><img alt=""><div class="lightbox-caption"></div></div>`;
 document.body.appendChild(lightbox);
 
 const lightboxImage = lightbox.querySelector('img');
 const lightboxCaption = lightbox.querySelector('.lightbox-caption');
 const lightboxClose = lightbox.querySelector('.lightbox-close');
-const lightboxTriggers = document.querySelectorAll('[data-lightbox-image]');
-
-const openLightbox = (imageSrc, caption) => {
-  lightboxImage.src = imageSrc;
-  lightboxImage.alt = caption;
-  lightboxCaption.textContent = caption;
+let lastTrigger = null;
+const openLightbox = (trigger) => {
+  lastTrigger = trigger;
+  lightboxImage.src = trigger.dataset.lightboxImage;
+  lightboxImage.alt = trigger.dataset.lightboxCaption || 'Expanded project image';
+  lightboxCaption.textContent = trigger.dataset.lightboxCaption || '';
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
+  lightboxClose.focus();
 };
-
 const closeLightbox = () => {
   lightbox.classList.remove('open');
   document.body.style.overflow = '';
+  if (lastTrigger) lastTrigger.focus();
 };
-
-lightboxTriggers.forEach(trigger => {
-  trigger.addEventListener('click', () => {
-    openLightbox(trigger.dataset.lightboxImage, trigger.dataset.lightboxCaption);
-  });
+document.querySelectorAll('[data-lightbox-image]').forEach((trigger) => {
+  trigger.addEventListener('click', () => openLightbox(trigger));
 });
-
 lightboxClose.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', event => {
-  if (event.target === lightbox) {
-    closeLightbox();
-  }
-});
-
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && lightbox.classList.contains('open')) {
-    closeLightbox();
+lightbox.addEventListener('click', (event) => { if (event.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', (event) => {
+  if (!lightbox.classList.contains('open')) return;
+  if (event.key === 'Escape') closeLightbox();
+  if (event.key === 'Tab') {
+    event.preventDefault();
+    lightboxClose.focus();
   }
 });
