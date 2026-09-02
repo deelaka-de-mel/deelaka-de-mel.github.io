@@ -3,338 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deelaka Jerome de Mel — Portfolio</title>
-
-  <meta name="description" content="Portfolio of Deelaka Jerome de Mel, Electronic & Telecommunication Engineering undergraduate at University of Moratuwa.">
-  <meta property="og:title" content="Deelaka Jerome de Mel — Portfolio">
-  <meta property="og:description" content="Electronic & Telecommunication Engineering undergraduate — hardware, software, and embedded systems projects.">
+  <title>Deelaka Jerome de Mel — Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of Deelaka Jerome de Mel, an Electronic and Telecommunication Engineering undergraduate building power-electronics, PCB, embedded, and digital-design systems.">
+  <meta property="og:title" content="Deelaka Jerome de Mel — Engineering Portfolio">
+  <meta property="og:description" content="Power electronics, PCB design, FPGA, and embedded systems projects.">
   <meta property="og:image" content="https://deelaka-de-mel.github.io/assets/images/headshot.png">
   <meta property="og:type" content="website">
-
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="academics.html">Academics</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-<section id="about" class="fade-in">
-  <img src="assets/images/headshot.png" alt="Deelaka Jerome de Mel" class="profile-photo">
-  <h1>Deelaka Jerome de Mel</h1>
-  <p class="tagline">Electronic & Telecommunication Engineering Undergraduate, University of Moratuwa</p>
-
-  <p class="bio">
-    I'm an ENTC undergraduate who enjoys working on hardware. My interest 
-    interests lie in power electronics, embedded systems, analog circuit design, and digital design.
-  </p>
-
-  <div class="hero-actions">
-    <a class="hero-cta" href="assets/cv/deelaka-cv.pdf" download="Deelaka-Jerome-de-Mel-CV.pdf">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 3a1 1 0 0 1 1 1v8.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L11 12.586V4a1 1 0 0 1 1-1Zm-6 14a1 1 0 0 1 1 1v1h10v-1a1 1 0 1 1 2 0v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-1a1 1 0 0 1 1-1Z" fill="currentColor"/>
-      </svg>
-      <span>Download CV</span>
-    </a>
-  </div>
-</section>
-
-  <section id="education" class="fade-in">
-    <h2>Education</h2>
-    <div class="education-timeline">
-      <article class="education-card">
-        <p class="education-meta">2020 — 2022</p>
-        <h3>Advanced Level</h3>
-        <p class="education-school">School: St. Joseph's College, Colombo 10.</p>
-        <p class="education-detail">Stream / specialization: Physical Science</p>
-        <p class="education-detail">Z-Score: 2.657</p>
-        <span class="education-status">Current Status: Completed</span>
-      </article>
-
-      <article class="education-card">
-        <p class="education-meta">2023 — Present</p>
-        <h3>B.Sc. Engineering (Hons)</h3>
-        <p class="education-school">University of Moratuwa</p>
-        <p class="education-detail">Electronic & Telecommunication Engineering</p>
-        <span class="education-status">Current Status: Undergraduate</span>
-      </article>
-    </div>
-  </section>
-
-  <section id="skills" class="fade-in">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <span class="skill-badge">Altium Designer</span>
-      <span class="skill-badge">LTspice</span>
-      <span class="skill-badge">PCB Design</span>
-      <span class="skill-badge">Verilog / SystemVerilog</span>
-      <span class="skill-badge">Java</span>
-      <span class="skill-badge">Python</span>
-    </div>
-  </section>
-
-  <section id="projects" class="fade-in">
-    <h2>Featured Projects</h2>
-
-    <div class="filter-buttons" aria-label="Project category filters">
-      <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
-      <button class="filter-btn" type="button" data-filter="hardware" aria-pressed="false">Hardware</button>
-      <button class="filter-btn" type="button" data-filter="software" aria-pressed="false">Software</button>
-    </div>
-
-    <div class="project-showcase-list" aria-label="Project showcase">
-      <article class="project-showcase" data-category="hardware">
-        <div class="project-media">
-          <button class="project-hero" type="button" data-lightbox-image="assets/images/class  D amp/amplifier.png" data-lightbox-caption="Class D Amplifier — power stage and gate driver architecture">
-            <img src="assets/images/class  D amp/amplifier.png" alt="Class D amplifier hardware hero image" loading="lazy" decoding="async">
-          </button>
-
-          <div class="project-gallery" aria-label="Class D Amplifier screenshots">
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/class  D amp/filter.png" data-lightbox-caption="LC filter and output shaping stage">
-              <img src="assets/images/class  D amp/filter.png" alt="Class D amplifier filter screenshot" loading="lazy" decoding="async">
-            </button>
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/class  D amp/pre amp.png" data-lightbox-caption="Pre-amplifier and modulation input section">
-              <img src="assets/images/class  D amp/pre amp.png" alt="Class D amplifier input stage screenshot" loading="lazy" decoding="async">
-            </button>
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/class  D amp/simulation.png" data-lightbox-caption="Simulation and signal analysis for the switch mode design">
-              <img src="assets/images/class  D amp/simulation.png" alt="Class D amplifier simulation screenshot" loading="lazy" decoding="async">
-            </button>
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/class  D amp/triangle wave gen.png" data-lightbox-caption="Triangle wave generation subsystem">
-              <img src="assets/images/class  D amp/triangle wave gen.png" alt="Class D amplifier triangle wave generator screenshot" loading="lazy" decoding="async">
-            </button>
-          </div>
-        </div>
-
-        <div class="project-content">
-          <p class="project-overline">Hardware · Power Electronics</p>
-          <h3>Class D Amplifier</h3>
-          <p>A 300 kHz Class D amplifier; I was responsible for the gate driver and half-bridge stage.</p>
-
-          <div class="project-tech-list" aria-label="Technologies used">
-            <span class="tech-badge">LTspice</span>
-            <span class="tech-badge">PCB Design</span>
-            <span class="tech-badge">Gate Driver</span>
-            <span class="tech-badge">Power Stage</span>
-          </div>
-
-          <div class="project-status-row">
-            <span class="project-status">Status: Completed</span>
-          </div>
-
-          <div class="project-actions">
-            <a class="project-link project-link-primary" href="https://github.com/deelaka-de-mel/class-d-audio-amplifier" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="project-link" href="projects/class-d-amplifier.html">More Details</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-showcase reverse" data-category="hardware">
-        <div class="project-media">
-          <button class="project-hero" type="button" data-lightbox-image="assets/images/sine wave inverter/pcb.png" data-lightbox-caption="Pure Sine Wave Inverter — high-voltage output stage and transformer interface">
-            <img src="assets/images/sine wave inverter/pcb.png" alt="Pure sine wave inverter hero image" loading="lazy" decoding="async">
-          </button>
-
-          <div class="project-gallery" aria-label="Pure Sine Wave Inverter screenshots">
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/sine wave inverter/output stage.png" data-lightbox-caption="PCB layout and power routing for the inverter module">
-              <img src="assets/images/sine wave inverter/output stage.png" alt="Inverter Output stage" loading="lazy" decoding="async">
-            </button>
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/sine wave inverter/pwm generation .png" data-lightbox-caption="PWM generation and control timing waveform">
-              <img src="assets/images/sine wave inverter/pwm generation .png" alt="Inverter PWM generation screenshot" loading="lazy" decoding="async">
-            </button>
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/sine wave inverter/routing.png" data-lightbox-caption="Signal and power routing review for the converter stage">
-              <img src="assets/images/sine wave inverter/routing.png" alt="Inverter routing screenshot" loading="lazy" decoding="async">
-            </button>
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/sine wave inverter/transformer switching.png" data-lightbox-caption="Transformer switching and driver synchronization details">
-              <img src="assets/images/sine wave inverter/transformer switching.png" alt="Transformer switching screenshot" loading="lazy" decoding="async">
-            </button>
-          </div>
-        </div>
-
-        <div class="project-content">
-          <p class="project-overline">Hardware · Power Electronics</p>
-          <h3>Pure Sine Wave Inverter</h3>
-          <p>A 300 W pure sine wave inverter operating at 12 V, I designed the push-pull converter stage and transformer to step up 12V to 400V. I also built the schematic and PCB routing for the power stage.</p>
-
-          <div class="project-tech-list" aria-label="Technologies used">
-            <span class="tech-badge">Transformer Design</span>
-            <span class="tech-badge">Power Electronics</span>
-            <span class="tech-badge">Simulation</span>
-            <span class="tech-badge">PCB Layout</span>
-          </div>
-
-          <div class="project-status-row">
-            <span class="project-status">Status: Completed</span>
-          </div>
-
-          <div class="project-actions">
-            <a class="project-link project-link-primary" href="https://github.com/deelaka-de-mel" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="project-link" href="projects/pure-sine-wave-inverter.html">More Details</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-showcase reverse" data-category="hardware">
-        <div class="project-media">
-          <button class="project-hero" type="button" data-lightbox-image="assets/images/uart/fsm.png" data-lightbox-caption="UART Implementation — FPGA deployment and verification">
-            <img src="assets/images/uart/fsm.png" alt="UART FPGA implementation hero image" loading="lazy" decoding="async">
-          </button>
-
-          <!--<div class="project-gallery" aria-label="UART Implementation screenshots">
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/uart/fsm.png" data-lightbox-caption="4-state FSM design for transmitter and receiver">
-              <img src="assets/images/uart/fsm.png" alt="FSM design screenshot" loading="lazy" decoding="async">
-            </button>
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/uart/modelsim.png" data-lightbox-caption="ModelSim loopback testbench verification">
-              <img src="assets/images/uart/modelsim.png" alt="ModelSim verification screenshot" loading="lazy" decoding="async">
-            </button>
-          </div>-->
-        </div>
-
-        <div class="project-content">
-          <p class="project-overline">Hardware · Digital Design</p>
-          <h3>UART Implementation in FPGA</h3>
-          <p>A complete UART transceiver implemented from scratch in Verilog HDL using discrete FSM logic (no IP cores), deployed on a Cyclone IV E FPGA.</p>
-
-          <div class="project-tech-list" aria-label="Technologies used">
-            <span class="tech-badge">Verilog</span>
-            <span class="tech-badge">FPGA</span>
-            <span class="tech-badge">Quartus</span>
-            <span class="tech-badge">Questa</span>
-          </div>
-
-          <div class="project-status-row">
-            <span class="project-status">Status: Completed</span>
-          </div>
-
-          <div class="project-actions">
-            <a class="project-link project-link-primary" href="https://github.com/deelaka-de-mel/UART-Implementation-in-FPGA" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-showcase" data-category="hardware">
-        <div class="project-media">
-          <button class="project-hero" type="button" data-lightbox-image="assets/images/Arithmetic ALU/fpga.webp" data-lightbox-caption="Configurable Integer Arithmetic Unit — architecture block diagram">
-            <img src="assets/images/Arithmetic ALU/fpga.webp" alt="FPGA implementation of the configurable integer arithmetic unit" loading="lazy" decoding="async">
-          </button>
-
-      
-        </div>
-
-        <div class="project-content">
-          <p class="project-overline">Hardware · RTL Design</p>
-          <h3>Configurable Integer Arithmetic & Matrix Multiplication Unit</h3>
-          <p>Design of configurable 8 to 128-bit integer multiplier and divider units built entirely from scratch to evaluate hardware architectures for latency and logic resource utilization.</p>
-
-          <div class="project-tech-list" aria-label="Technologies used">
-            <span class="tech-badge">SystemVerilog</span>
-            <span class="tech-badge">Computer Architecture</span>
-            <span class="tech-badge">RTL Design</span>
-          </div>
-
-          <div class="project-status-row">
-            <span class="project-status">Status: Ongoing</span>
-          </div>
-
-        </div>
-      </article>
-
-      <article class="project-showcase reverse" data-category="software">
-        <div class="project-media">
-          <button class="project-hero" type="button" data-lightbox-image="assets/images/sbtrs/hero.png" data-lightbox-caption="Smart Bus Ticketing System — Driver module dashboard">
-            <img src="assets/images/sbtrs/hero.png" alt="Smart bus ticketing dashboard hero image" loading="lazy" decoding="async">
-          </button>
-
-          <!--<div class="project-gallery" aria-label="SBTRS screenshots">
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/sbtrs/api.png" data-lightbox-caption="RESTful backend API integration">
-              <img src="assets/images/sbtrs/api.png" alt="API structure screenshot" loading="lazy" decoding="async">
-            </button>
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/sbtrs/manifest.png" data-lightbox-caption="Passenger manifest and ticket verification flow">
-              <img src="assets/images/sbtrs/manifest.png" alt="Passenger manifest screenshot" loading="lazy" decoding="async">
-            </button>
-          </div>-->
-        </div>
-
-        <div class="project-content">
-          <p class="project-overline">Software · Web Development</p>
-          <h3>Smart Bus Ticketing and Reservation System</h3>
-          <p>A scalable web-based platform featuring a dedicated Driver Module for passenger manifest viewing, ticket verification, and secure role-based trip management.</p>
-
-          <div class="project-tech-list" aria-label="Technologies used">
-            <span class="tech-badge">Spring Boot</span>
-            <span class="tech-badge">Supabase</span>
-            <span class="tech-badge">Java</span>
-            <span class="tech-badge">REST API</span>
-          </div>
-
-          <div class="project-status-row">
-            <span class="project-status">Status: Completed</span>
-          </div>
-
-          <div class="project-actions">
-            <a class="project-link project-link-primary" href="https://github.com/deelaka-de-mel/smart-bus-ticketing-and-reservation" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-showcase" data-category="hardware">
-        <div class="project-media">
-          <button class="project-hero" type="button" data-lightbox-image="assets/images/analog solar tracker/routing.png" data-lightbox-caption="Analog Solar Tracker — PCB routing and control-signal layout">
-            <img src="assets/images/analog solar tracker/routing.png" alt="Analog solar tracker hero image" loading="lazy" decoding="async">
-          </button>
-
-          <div class="project-gallery" aria-label="Analog Solar Tracker screenshots">
-            <button class="gallery-thumb" type="button" data-lightbox-image="assets/images/analog solar tracker/solar tracker pcb.png" data-lightbox-caption="Analog solar tracker PCB implementation">
-              <img src="assets/images/analog solar tracker/solar tracker pcb.png" alt="Solar tracker circuit board screenshot" loading="lazy" decoding="async">
-            </button>
-          </div>
-        </div>
-
-        <div class="project-content">
-          <p class="project-overline">Hardware · Discrete Circuit Design</p>
-          <h3>Analog Solar Tracker</h3>
-          <p>A discrete implementation of a solar tracker that emphasizes analog control behavior, stable actuator response, and a clean physical hardware layout.</p>
-
-          <div class="project-tech-list" aria-label="Technologies used">
-            <span class="tech-badge">Analog Design</span>
-            <span class="tech-badge">Control Systems</span>
-            <span class="tech-badge">PCB</span>
-            <span class="tech-badge">Sensors</span>
-          </div>
-
-          <div class="project-status-row">
-            <span class="project-status">Status: Completed</span>
-          </div>
-
-          <div class="project-actions">
-            <a class="project-link project-link-primary" href="https://github.com/deelaka-de-mel" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="project-link" href="projects/analog-solar-tracker.html">More Details</a>
-          </div>
-        </div>
-      </article>
+  <header class="site-header"><nav aria-label="Main navigation"><a class="wordmark" href="#top">DJ<span>.</span></a><div class="nav-links"><a href="#work">Selected work</a><a href="#pcb">PCB design</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav></header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow">Electronic &amp; Telecommunication Engineering</p><h1 id="hero-title">I design hardware that has to work in the real world.</h1><p class="hero-intro">I’m Deelaka Jerome de Mel, an undergraduate at the University of Moratuwa working across power electronics, PCB design, FPGA systems, and analog circuits.</p><div class="hero-actions"><a class="button button-primary" href="#work">View selected work <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="assets/cv/deelaka-cv.pdf" download="Deelaka-Jerome-de-Mel-CV.pdf">Download CV</a></div></div>
+      <aside id="about" class="hero-about" aria-labelledby="about-title"><img src="assets/images/headshot.png" alt="Portrait of Deelaka Jerome de Mel"><div><p class="eyebrow">About</p><h2 id="about-title">A hardware-first engineering practice.</h2><p>I enjoy turning an electrical problem into a buildable system: modelling behaviour, making circuit-level decisions, and carrying it through to hardware.</p><a href="academics.html">Academic record →</a></div></aside>
+      <dl class="proof-points" aria-label="Highlights"><div><dt>3.97</dt><dd>Current CGPA</dd></div><div><dt>4×</dt><dd>Dean’s List</dd></div><div><dt>300 W</dt><dd>Inverter design</dd></div></dl>
+    </section>
+    <section id="work" class="section-work" aria-labelledby="work-title">
+      <div class="section-heading"><p class="eyebrow">01 / Selected work</p><h2 id="work-title">Systems, not just screenshots.</h2><p>Each project is grounded in a specific engineering problem, with an emphasis on the decisions and implementation work I owned.</p></div>
+      <div class="case-studies">
+        <article class="case-study case-study-featured"><a class="case-image" href="projects/pure-sine-wave-inverter.html" aria-label="Read the Pure Sine Wave Inverter case study"><img src="assets/images/sine wave inverter/pcb.png" alt="PCB layout for the pure sine wave inverter"></a><div class="case-copy"><p class="project-number">01 / Power electronics</p><h3>300 W Pure Sine Wave Inverter</h3><p>Designed the push-pull converter, transformer interface, schematic, and PCB routing for a 12 V to 400 V power stage.</p><ul class="facts"><li>12 V input</li><li>300 W target</li><li>Power PCB</li></ul><div class="case-links"><a href="projects/pure-sine-wave-inverter.html">Case study →</a><a href="https://github.com/deelaka-de-mel" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></article>
+        <article class="case-study"><a class="case-image" href="projects/class-d-amplifier.html" aria-label="Read the Class D Amplifier case study"><img src="assets/images/class  D amp/amplifier.png" alt="Class D amplifier power stage and gate driver circuit"></a><div class="case-copy"><p class="project-number">02 / Power electronics</p><h3>300 kHz Class D Amplifier</h3><p>Built and analysed the gate-driver and half-bridge stage, with attention to switching behaviour and output filtering.</p><ul class="facts"><li>300 kHz</li><li>Gate driver</li><li>Half bridge</li></ul><div class="case-links"><a href="projects/class-d-amplifier.html">Case study →</a><a href="https://github.com/deelaka-de-mel/class-d-audio-amplifier" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></article>
+        <article class="case-study"><div class="case-image"><img src="assets/images/uart/fsm.png" alt="Finite-state-machine diagram for a UART FPGA implementation"></div><div class="case-copy"><p class="project-number">03 / Digital design</p><h3>UART Implementation in FPGA</h3><p>Implemented a complete UART transceiver from scratch in Verilog using discrete FSM logic, then deployed it on a Cyclone IV E FPGA.</p><ul class="facts"><li>Verilog HDL</li><li>FSM logic</li><li>Cyclone IV E</li></ul><div class="case-links"><a href="https://github.com/deelaka-de-mel/UART-Implementation-in-FPGA" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></div></article>
       </div>
-  </section>
-
-  <section id="contact" class="fade-in">
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <a class="contact-button email" href="mailto:deelakademel23@gmail.com">Email</a>
-      <a class="contact-button github" href="https://github.com/deelaka-de-mel" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a class="contact-button linkedin" href="https://www.linkedin.com/in/deelaka-jerome-de-mel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </div>
-  </section>
-
+      <div class="project-archive"><p class="eyebrow">More work</p><a href="projects/analog-solar-tracker.html"><strong>Analog Solar Tracker</strong><span>Discrete analog control and PCB implementation</span><b aria-hidden="true">→</b></a><a href="https://github.com/deelaka-de-mel/smart-bus-ticketing-and-reservation" target="_blank" rel="noopener noreferrer"><strong>Smart Bus Ticketing System</strong><span>Role-based Java and REST platform</span><b aria-hidden="true">↗</b></a><div class="archive-static"><strong>Configurable Arithmetic &amp; Matrix Unit</strong><span>8–128-bit SystemVerilog RTL design</span></div></div>
+    </section>
+    <section id="pcb" class="pcb-section" aria-labelledby="pcb-title"><div class="section-heading"><p class="eyebrow">02 / PCB design</p><h2 id="pcb-title">Layout is part of the circuit.</h2><p>I treat board design as an electrical constraint—not a final drafting step. These layouts focus on current paths, switching loops, component placement, and practical routing.</p></div><div class="pcb-grid"><figure class="pcb-card pcb-card-large"><button type="button" data-lightbox-image="assets/images/sine wave inverter/pcb.png" data-lightbox-caption="Pure Sine Wave Inverter — PCB layout"><img src="assets/images/sine wave inverter/pcb.png" alt="Pure sine wave inverter PCB layout"></button><figcaption><span>01</span><strong>Pure Sine Wave Inverter</strong><p>Power-stage placement and routing for high-voltage conversion.</p></figcaption></figure><figure class="pcb-card"><button type="button" data-lightbox-image="assets/images/analog solar tracker/solar tracker pcb.png" data-lightbox-caption="Analog Solar Tracker — PCB layout"><img src="assets/images/analog solar tracker/solar tracker pcb.png" alt="Analog solar tracker PCB layout"></button><figcaption><span>02</span><strong>Analog Solar Tracker</strong><p>Discrete analog-control board implementation.</p></figcaption></figure><figure class="pcb-card"><button type="button" data-lightbox-image="assets/images/class  D amp/amplifier.png" data-lightbox-caption="Class D Amplifier — power-stage circuit"><img src="assets/images/class  D amp/amplifier.png" alt="Class D amplifier circuit design"></button><figcaption><span>03</span><strong>Class D Amplifier</strong><p>Switching power stage and gate-driver architecture.</p></figcaption></figure></div></section>
+  </main>
+  <footer id="contact"><p class="eyebrow">03 / Contact</p><h2>Let’s build something useful.</h2><a class="footer-email" href="mailto:deelakademel23@gmail.com">deelakademel23@gmail.com</a><div class="footer-links"><a href="https://github.com/deelaka-de-mel" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/deelaka-jerome-de-mel" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="assets/cv/deelaka-cv.pdf" download="Deelaka-Jerome-de-Mel-CV.pdf">Download CV ↓</a></div></footer>
   <script src="js/script.js"></script>
 </body>
 </html>
