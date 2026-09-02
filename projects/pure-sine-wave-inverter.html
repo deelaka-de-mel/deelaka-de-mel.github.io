@@ -21,24 +21,25 @@
 
     <div class="project-detail-grid">
       <div>
-        <h2>Hero Image</h2>
-        <img src="../assets/images/sine wave inverter/output stage.png" alt="Pure sine wave inverter hero image" class="detail-image">
+        <h2>PCB</h2>
+        <img src="../assets/images/sine wave inverter/pcb.png" alt="PCB layout" class="detail-image">
       </div>
       <div>
         <h2>Gallery</h2>
         <div class="project-gallery project-detail-gallery">
-          <img src="../assets/images/sine wave inverter/pcb.png" alt="PCB layout" class="detail-image">
-          <img src="../assets/images/sine wave inverter/pwm generation .png" alt="PWM generation" class="detail-image">
+          <img src="../assets/images/sine wave inverter/Transformer.jpg" alt="Pure sine wave inverter hero image" class="detail-image">
+          <img src="../assets/images/sine wave inverter/Gate drive signals.jpg" alt="PWM generation" class="detail-image">
           <img src="../assets/images/sine wave inverter/routing.png" alt="Routing diagram" class="detail-image">
+          <img src="../assets/images/sine wave inverter/Actual PCB.jpg" alt="Routing diagram" class="detail-image">
         </div>
       </div>
     </div>
 
     <h2>Overview</h2>
-    <p>This project presents a hardware-driven inverter implementation for DC-to-AC conversion with emphasis on converter design, transformer behavior, and stable switching performance.</p>
+    <p>I was in charge of designing the Converter stage to step up 12V to 400V.</p>
 
     <h2>Motivation</h2>
-    <p>To build an inverter that converts low-voltage DC power into a clean AC waveform using a practical power-electronics architecture.</p>
+    <p>To build an efficient push pull converter that could maintain a constant 400V in spite of load variations.</p>
 
     <h2>Problem Statement</h2>
     <p>The primary challenge was creating a reliable high-voltage conversion stage while preserving a well-controlled output waveform and manageable hardware complexity.</p>
@@ -46,28 +47,27 @@
     <h2>Features</h2>
     <ul>
       <li>Push-pull converter stage</li>
-      <li>Transformer-based voltage step-up</li>
-      <li>PCB routing and power distribution focus</li>
-      <li>Waveform-driven control design</li>
+      <li>Custom wound Transformer-based voltage step-up</li>
     </ul>
 
     <h2>Hardware Used</h2>
     <ul>
-      <li>12 V DC input stage</li>
-      <li>Transformer hardware</li>
-      <li>Power switching stage</li>
-      <li>PCB implementation</li>
+      <li>SG3525</li>
+      <li>EE55 transformer core</li>
+      <li>IR2110 gate drivers</li>
     </ul>
 
     <h2>Software Used</h2>
     <ul>
-      <li>Simulation and circuit validation tools</li>
-      <li>PCB analysis workflows</li>
-      <li>Design review and waveform interpretation</li>
+      <li>LTspice</li>
+      <li>Altium Designer</li>
     </ul>
 
     <h2>Challenges Faced</h2>
-    <p>Balancing voltage transformation with stable switching, routing discipline, and design repeatability across the power board.</p>
+    <ul>
+      <li>Transformer design and winding</li>
+      <li>Maintaining a constant output voltage under varying load conditions</li>
+      <li>Ensuring accurate and stable operation of the push-pull converter stage</li>
 
     <h2>Future Improvements</h2>
     <p>Improving efficiency, thermal performance, and integration for a more production-ready power conversion board.</p>

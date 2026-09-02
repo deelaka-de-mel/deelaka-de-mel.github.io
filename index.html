@@ -1,40 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Deelaka Jerome de Mel — Engineering Portfolio</title>
-  <meta name="description" content="Portfolio of Deelaka Jerome de Mel, an Electronic and Telecommunication Engineering undergraduate building power-electronics, PCB, embedded, and digital-design systems.">
+
+  <meta
+    name="description"
+    content="Portfolio of Deelaka Jerome de Mel, an Electronic and Telecommunication Engineering undergraduate building power-electronics, PCB, embedded, and digital-design systems."
+  >
+
   <meta property="og:title" content="Deelaka Jerome de Mel — Engineering Portfolio">
-  <meta property="og:description" content="Power electronics, PCB design, FPGA, and embedded systems projects.">
-  <meta property="og:image" content="https://deelaka-de-mel.github.io/assets/images/headshot.png">
+  <meta
+    property="og:description"
+    content="Power electronics, PCB design, FPGA, and embedded systems projects."
+  >
+  <meta
+    property="og:image"
+    content="https://deelaka-de-mel.github.io/assets/images/headshot.png"
+  >
   <meta property="og:type" content="website">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header class="site-header"><nav aria-label="Main navigation"><a class="wordmark" href="#top">DJ<span>.</span></a><div class="nav-links"><a href="#work">Selected work</a><a href="#pcb">PCB design</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav></header>
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy"><p class="eyebrow">Electronic &amp; Telecommunication Engineering</p><h1 id="hero-title">I design hardware that has to work in the real world.</h1><p class="hero-intro">I’m Deelaka Jerome de Mel, an undergraduate at the University of Moratuwa working across power electronics, PCB design, FPGA systems, and analog circuits.</p><div class="hero-actions"><a class="button button-primary" href="#work">View selected work <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="assets/cv/deelaka-cv.pdf" download="Deelaka-Jerome-de-Mel-CV.pdf">Download CV</a></div></div>
-      <aside id="about" class="hero-about" aria-labelledby="about-title"><img src="assets/images/headshot.png" alt="Portrait of Deelaka Jerome de Mel"><div><p class="eyebrow">About</p><h2 id="about-title">A hardware-first engineering practice.</h2><p>I enjoy turning an electrical problem into a buildable system: modelling behaviour, making circuit-level decisions, and carrying it through to hardware.</p><a href="academics.html">Academic record →</a></div></aside>
-      <dl class="proof-points" aria-label="Highlights"><div><dt>3.97</dt><dd>Current CGPA</dd></div><div><dt>4×</dt><dd>Dean’s List</dd></div><div><dt>300 W</dt><dd>Inverter design</dd></div></dl>
-    </section>
-    <section id="work" class="section-work" aria-labelledby="work-title">
-      <div class="section-heading"><p class="eyebrow">01 / Selected work</p><h2 id="work-title">Systems, not just screenshots.</h2><p>Each project is grounded in a specific engineering problem, with an emphasis on the decisions and implementation work I owned.</p></div>
-      <div class="case-studies">
-        <article class="case-study case-study-featured"><a class="case-image" href="projects/pure-sine-wave-inverter.html" aria-label="Read the Pure Sine Wave Inverter case study"><img src="assets/images/sine wave inverter/pcb.png" alt="PCB layout for the pure sine wave inverter"></a><div class="case-copy"><p class="project-number">01 / Power electronics</p><h3>300 W Pure Sine Wave Inverter</h3><p>Designed the push-pull converter, transformer interface, schematic, and PCB routing for a 12 V to 400 V power stage.</p><ul class="facts"><li>12 V input</li><li>300 W target</li><li>Power PCB</li></ul><div class="case-links"><a href="projects/pure-sine-wave-inverter.html">Case study →</a><a href="https://github.com/deelaka-de-mel" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></article>
-        <article class="case-study"><a class="case-image" href="projects/class-d-amplifier.html" aria-label="Read the Class D Amplifier case study"><img src="assets/images/class  D amp/amplifier.png" alt="Class D amplifier power stage and gate driver circuit"></a><div class="case-copy"><p class="project-number">02 / Power electronics</p><h3>300 kHz Class D Amplifier</h3><p>Built and analysed the gate-driver and half-bridge stage, with attention to switching behaviour and output filtering.</p><ul class="facts"><li>300 kHz</li><li>Gate driver</li><li>Half bridge</li></ul><div class="case-links"><a href="projects/class-d-amplifier.html">Case study →</a><a href="https://github.com/deelaka-de-mel/class-d-audio-amplifier" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></article>
-        <article class="case-study"><div class="case-image"><img src="assets/images/uart/fsm.png" alt="Finite-state-machine diagram for a UART FPGA implementation"></div><div class="case-copy"><p class="project-number">03 / Digital design</p><h3>UART Implementation in FPGA</h3><p>Implemented a complete UART transceiver from scratch in Verilog using discrete FSM logic, then deployed it on a Cyclone IV E FPGA.</p><ul class="facts"><li>Verilog HDL</li><li>FSM logic</li><li>Cyclone IV E</li></ul><div class="case-links"><a href="https://github.com/deelaka-de-mel/UART-Implementation-in-FPGA" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></div></article>
+
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <a class="wordmark" href="#top">
+        DJ<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#work">Selected work</a>
+        <a href="#pcb">PCB design</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="project-archive"><p class="eyebrow">More work</p><a href="projects/analog-solar-tracker.html"><strong>Analog Solar Tracker</strong><span>Discrete analog control and PCB implementation</span><b aria-hidden="true">→</b></a><a href="https://github.com/deelaka-de-mel/smart-bus-ticketing-and-reservation" target="_blank" rel="noopener noreferrer"><strong>Smart Bus Ticketing System</strong><span>Role-based Java and REST platform</span><b aria-hidden="true">↗</b></a><div class="archive-static"><strong>Configurable Arithmetic &amp; Matrix Unit</strong><span>8–128-bit SystemVerilog RTL design</span></div></div>
+    </nav>
+  </header>
+
+
+  <main id="top">
+
+    <section class="hero" aria-labelledby="hero-title">
+
+      <div class="hero-copy">
+        <p class="eyebrow">
+          Electronic &amp; Telecommunication Engineering
+        </p>
+
+        <h1 id="hero-title">
+          I design hardware that has to work in the real world.
+        </h1>
+
+        <p class="hero-intro">
+          I’m Deelaka Jerome de Mel, an undergraduate at the University of Moratuwa
+          working across power electronics, PCB design, FPGA systems, and analog circuits.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">
+            View selected work
+            <span aria-hidden="true">↓</span>
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="assets/cv/deelaka-cv.pdf"
+            download="Deelaka-Jerome-de-Mel-CV.pdf"
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+
+
+      <aside id="about" class="hero-about" aria-labelledby="about-title">
+
+        <img
+          src="assets/images/headshot.png"
+          alt="Portrait of Deelaka Jerome de Mel"
+        >
+
+        <div>
+          <p class="eyebrow">About</p>
+
+          <h2 id="about-title">
+            A hardware-first engineering practice.
+          </h2>
+
+          <p>
+            I enjoy turning an electrical problem into a buildable system:
+            modelling behaviour, making circuit-level decisions, and carrying
+            it through to hardware.
+          </p>
+
+          <a href="academics.html">
+            Academic record →
+          </a>
+        </div>
+
+      </aside>
+
+
+      <dl class="proof-points" aria-label="Highlights">
+
+        <div>
+          <dt>3.97</dt>
+          <dd>Current CGPA</dd>
+        </div>
+
+        <div>
+          <dt>4×</dt>
+          <dd>Dean’s List</dd>
+        </div>
+
+        <div>
+          <dt>3</dt>
+          <dd>PCB designs</dd>
+
+      </dl>
+
     </section>
-    <section id="pcb" class="pcb-section" aria-labelledby="pcb-title"><div class="section-heading"><p class="eyebrow">02 / PCB design</p><h2 id="pcb-title">Layout is part of the circuit.</h2><p>I treat board design as an electrical constraint—not a final drafting step. These layouts focus on current paths, switching loops, component placement, and practical routing.</p></div><div class="pcb-grid"><figure class="pcb-card pcb-card-large"><button type="button" data-lightbox-image="assets/images/sine wave inverter/pcb.png" data-lightbox-caption="Pure Sine Wave Inverter — PCB layout"><img src="assets/images/sine wave inverter/pcb.png" alt="Pure sine wave inverter PCB layout"></button><figcaption><span>01</span><strong>Pure Sine Wave Inverter</strong><p>Power-stage placement and routing for high-voltage conversion.</p></figcaption></figure><figure class="pcb-card"><button type="button" data-lightbox-image="assets/images/analog solar tracker/solar tracker pcb.png" data-lightbox-caption="Analog Solar Tracker — PCB layout"><img src="assets/images/analog solar tracker/solar tracker pcb.png" alt="Analog solar tracker PCB layout"></button><figcaption><span>02</span><strong>Analog Solar Tracker</strong><p>Discrete analog-control board implementation.</p></figcaption></figure><figure class="pcb-card"><button type="button" data-lightbox-image="assets/images/class  D amp/amplifier.png" data-lightbox-caption="Class D Amplifier — power-stage circuit"><img src="assets/images/class  D amp/amplifier.png" alt="Class D amplifier circuit design"></button><figcaption><span>03</span><strong>Class D Amplifier</strong><p>Switching power stage and gate-driver architecture.</p></figcaption></figure></div></section>
+
+
+    <section id="work" class="section-work" aria-labelledby="work-title">
+
+      <div class="section-heading">
+        <p class="eyebrow">01 / Selected work</p>
+
+        <h2 id="work-title">
+          Systems, not just screenshots.
+        </h2>
+
+        <p>
+          Each project is grounded in a specific engineering problem,
+          with an emphasis on the decisions and implementation work I owned.
+        </p>
+      </div>
+
+
+      <div class="case-studies">
+
+        <article class="case-study case-study-featured">
+
+          <a
+            class="case-image"
+            href="projects/pure-sine-wave-inverter.html"
+            aria-label="Read the Pure Sine Wave Inverter case study"
+          >
+            <img
+              src="assets/images/sine wave inverter/pcb.png"
+              alt="PCB layout for the pure sine wave inverter"
+            >
+          </a>
+
+          <div class="case-copy">
+
+            <p class="project-number">
+              01 / Power electronics
+            </p>
+
+            <h3>
+              300 W Pure Sine Wave Inverter
+            </h3>
+
+            <p>
+              Designed the push-pull converter, transformer interface,
+              schematic, and PCB routing for a 12 V to 400 V power stage.
+            </p>
+
+            <ul class="facts">
+              <li>12 V input</li>
+              <li>300 W target</li>
+              <li>Power PCB</li>
+            </ul>
+
+            <div class="case-links">
+              <a href="projects/pure-sine-wave-inverter.html">
+                Case study →
+              </a>
+
+              <a
+                href="https://github.com/deelaka-de-mel"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+            </div>
+
+          </div>
+        </article>
+
+
+        <article class="case-study">
+
+          <a
+            class="case-image"
+            href="projects/class-d-amplifier.html"
+            aria-label="Read the Class D Amplifier case study"
+          >
+            <img
+              src="assets/images/class  D amp/PCB_3D.png"
+              alt="Class D amplifier power stage and gate driver circuit"
+            >
+          </a>
+
+          <div class="case-copy">
+
+            <p class="project-number">
+              02 / Power electronics
+            </p>
+
+            <h3>
+              300 kHz Class D Amplifier
+            </h3>
+
+            <p>
+              Built and analysed the gate-driver and half-bridge stage,
+              with attention to switching behaviour and output filtering.
+            </p>
+
+            <ul class="facts">
+              <li>300 kHz</li>
+              <li>Gate driver</li>
+              <li>Half bridge</li>
+            </ul>
+
+            <div class="case-links">
+              <a href="projects/class-d-amplifier.html">
+                Case study →
+              </a>
+
+              <a
+                href="https://github.com/deelaka-de-mel/class-d-audio-amplifier"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+            </div>
+
+          </div>
+        </article>
+
+
+        <article class="case-study">
+
+          <div class="case-image">
+            <img
+              src="assets/images/uart/fsm.png"
+              alt="Finite-state-machine diagram for a UART FPGA implementation"
+            >
+          </div>
+
+          <div class="case-copy">
+
+            <p class="project-number">
+              03 / Digital design
+            </p>
+
+            <h3>
+              UART Implementation in FPGA
+            </h3>
+
+            <p>
+              Implemented a complete UART transceiver from scratch in Verilog
+              using discrete FSM logic, then deployed it on a Cyclone IV E FPGA.
+            </p>
+
+            <ul class="facts">
+              <li>Verilog HDL</li>
+              <li>FSM logic</li>
+              <li>Cyclone IV E</li>
+            </ul>
+
+            <div class="case-links">
+              <a
+                href="https://github.com/deelaka-de-mel/UART-Implementation-in-FPGA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View repository ↗
+              </a>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+
+
+      <div class="project-archive">
+
+        <p class="eyebrow">
+          More work
+        </p>
+
+        <a href="projects/analog-solar-tracker.html">
+          <strong>Analog Solar Tracker</strong>
+          <span>Discrete analog control and PCB implementation</span>
+          <b aria-hidden="true">→</b>
+        </a>
+
+        <a
+          href="https://github.com/deelaka-de-mel/smart-bus-ticketing-and-reservation"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>Smart Bus Ticketing System</strong>
+          <span>Role-based Java and REST platform</span>
+          <b aria-hidden="true">↗</b>
+        </a>
+
+        <div class="archive-static">
+          <strong>Configurable Arithmetic &amp; Matrix Unit</strong>
+          <span>8–128-bit SystemVerilog RTL design</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="pcb" class="pcb-section" aria-labelledby="pcb-title">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          02 / PCB design
+        </p>
+
+        <h2 id="pcb-title">
+          My PCB designs.
+        </h2>
+
+        <p>
+          I treat board design as an electrical constraint—not a final drafting
+          step. These layouts focus on current paths, switching loops, component
+          placement, and practical routing.
+        </p>
+
+      </div>
+
+
+      <div class="pcb-grid">
+
+        <figure class="pcb-card pcb-card-large">
+
+          <button
+            type="button"
+            data-lightbox-image="assets/images/sine wave inverter/pcb.png"
+            data-lightbox-caption="Pure Sine Wave Inverter — PCB layout"
+          >
+            <img
+              src="assets/images/sine wave inverter/pcb.png"
+              alt="Pure sine wave inverter PCB layout"
+            >
+          </button>
+
+          <figcaption>
+            <span>01</span>
+
+            <strong>
+              Pure Sine Wave Inverter
+            </strong>
+
+            <p>
+              Power-stage placement and routing for high-voltage conversion.
+            </p>
+          </figcaption>
+
+        </figure>
+
+
+        <figure class="pcb-card">
+
+          <button
+            type="button"
+            data-lightbox-image="assets/images/analog solar tracker/solar tracker pcb.png"
+            data-lightbox-caption="Analog Solar Tracker — PCB layout"
+          >
+            <img
+              src="assets/images/analog solar tracker/solar tracker pcb.png"
+              alt="Analog solar tracker PCB layout"
+            >
+          </button>
+
+          <figcaption>
+            <span>02</span>
+
+            <strong>
+              Analog Solar Tracker
+            </strong>
+
+            <p>
+              Discrete analog-control board implementation.
+            </p>
+          </figcaption>
+
+        </figure>
+
+
+        <figure class="pcb-card">
+
+          <button
+            type="button"
+            data-lightbox-image="assets/images/class  D amp/PCB_3D.png"
+            data-lightbox-caption="Class D Amplifier — power-stage circuit"
+          >
+            <img
+              src="assets/images/class  D amp/PCB_3D.png"
+              alt="Class D amplifier circuit design"
+            >
+          </button>
+
+          <figcaption>
+            <span>03</span>
+
+            <strong>
+              Class D Amplifier
+            </strong>
+
+            <p>
+              Switching power stage and gate-driver architecture.
+            </p>
+          </figcaption>
+
+        </figure>
+
+
+        <figure class="pcb-card">
+
+          <button
+            type="button"
+            data-lightbox-image="assets/images/smart plant pot/3d pcb.png"
+            data-lightbox-caption="Smart Plant Pot — 3D PCB design"
+          >
+            <img
+              src="assets/images/smart plant pot/3d pcb.png"
+              alt="3D view of the Smart Plant Pot PCB"
+            >
+          </button>
+
+          <figcaption>
+            <span>04</span>
+
+            <strong>
+              Smart Plant Pot
+            </strong>
+
+            <p>
+              3D PCB design for an automated plant-monitoring system.
+            </p>
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+    </section>
+
   </main>
-  <footer id="contact"><p class="eyebrow">03 / Contact</p><h2>Let’s build something useful.</h2><a class="footer-email" href="mailto:deelakademel23@gmail.com">deelakademel23@gmail.com</a><div class="footer-links"><a href="https://github.com/deelaka-de-mel" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/deelaka-jerome-de-mel" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="assets/cv/deelaka-cv.pdf" download="Deelaka-Jerome-de-Mel-CV.pdf">Download CV ↓</a></div></footer>
+
+
+  <footer id="contact">
+
+    <p class="eyebrow">
+      03 / Contact
+    </p>
+
+    <h2>
+      Let’s build something useful.
+    </h2>
+
+    <a class="footer-email" href="mailto:deelakademel23@gmail.com">
+      deelakademel23@gmail.com
+    </a>
+
+    <div class="footer-links">
+
+      <a
+        href="https://github.com/deelaka-de-mel"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/deelaka-jerome-de-mel"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn ↗
+      </a>
+
+      <a
+        href="assets/cv/deelaka-cv.pdf"
+        download="Deelaka-Jerome-de-Mel-CV.pdf"
+      >
+        Download CV ↓
+      </a>
+
+    </div>
+
+  </footer>
+
+
   <script src="js/script.js"></script>
+
 </body>
 </html>

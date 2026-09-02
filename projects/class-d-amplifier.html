@@ -21,13 +21,14 @@
 
     <div class="project-detail-grid">
       <div>
-        <h2>Hero Image</h2>
-        <img src="../assets/images/class  D amp/amplifier.png" alt="Class D amplifier hero image" class="detail-image">
+        <h2>3D PCB</h2>
+        <img src="../assets/images/class  D amp/PCB_3D.png" alt="Class D amplifier PCB" class="detail-image">
       </div>
       <div>
         <h2>Gallery</h2>
         <div class="project-gallery project-detail-gallery">
-          <img src="../assets/images/class  D amp/filter.png" alt="Filter stage" class="detail-image">
+          <img src="../assets/images/class  D amp/PCB_routing.png" alt="Routed PCB" class="detail-image">
+          <img src="../assets/images/class  D amp/gate drive signals.jpg" alt="Filter stage" class="detail-image">
           <img src="../assets/images/class  D amp/pre amp.png" alt="Pre-amplifier stage" class="detail-image">
           <img src="../assets/images/class  D amp/simulation.png" alt="Simulation result" class="detail-image">
         </div>
@@ -35,10 +36,10 @@
     </div>
 
     <h2>Overview</h2>
-    <p>This project centers on a switch-mode audio amplifier design focused on high-frequency efficiency, careful gate drive behavior, and practical hardware validation.</p>
+    <p>This project centers on a class D audio amplifier design focused on high-frequency efficiency, careful gate drive behavior, and practical hardware validation.</p>
 
     <h2>Motivation</h2>
-    <p>The goal was to understand the real constraints of power electronics design, especially switching transitions, driver timing, and layout-sensitive behavior.</p>
+    <p>The goal was to understand the working of a class D amplifier, especially switching transitions, driver timing and Bootstrap design.</p>
 
     <h2>Problem Statement</h2>
     <p>The amplifier needed to address switch-node ringing, reliable gate drive operation, and signal integrity during high-frequency switching.</p>
@@ -47,31 +48,26 @@
     <ul>
       <li>Custom gate driver subsystem</li>
       <li>Bootstrap driver arrangement</li>
-      <li>RC snubber and ringing analysis</li>
-      <li>Simulation-driven validation workflow</li>
-    </ul>
-
-    <h2>Hardware Used</h2>
-    <ul>
-      <li>Half-bridge power stage</li>
-      <li>Gate driver circuitry</li>
-      <li>LC filter network</li>
-      <li>Class D switching hardware</li>
+      <li>Simulation-driven Circuit</li>
     </ul>
 
     <h2>Software Used</h2>
     <ul>
       <li>LTspice</li>
-      <li>PCB design tools</li>
-      <li>Simulation and waveform analysis</li>
+      <li>Altium Designer</li>
     </ul>
 
     <h2>Challenges Faced</h2>
-    <p>Switch-node oscillations, driver timing stability, and balancing practical implementation with thorough bench-level validation.</p>
-
-    <h2>Future Improvements</h2>
-    <p>Refining thermal and layout performance for higher power density and stronger manufacturability.</p>
-
+    <ul>
+    <li>High frequency compatibility with available local Integrated circuits.</li>
+    <li>I designed the first iteration of the gate driver using transistors, the bootstrap circuit using a capacitor and a Schottky diode, and implemented dead time uing a resistor capacitor network.</li>
+    <li>This was unsuccessfull as the Diode-Resistor Gate couldn't provide an adaptive dead time for the varying duty cycle provided by the gate drivers. This caused cross conduction in the half bridge, heating up the mosfets and current limiting the power supply. </li>
+    </ul>
+    <h2>Insights Gained</h2>
+    <ul>
+      <li>Constraints faced when operating at high frequencies, which include signal distortion, higgh frequency ringing.</li>
+  
+    </ul>
     <h2>GitHub Repository</h2>
     <p><a href="https://github.com/deelaka-de-mel/class-d-audio-amplifier" target="_blank" rel="noopener noreferrer">Class D Audio Amplifier Repository</a></p>
 
